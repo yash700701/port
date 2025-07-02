@@ -97,7 +97,7 @@ export default function Home() {
 
         <div className="flex gap-2">
           <div className="border-[1px] px-3 py-1 font-poppins text-lg flex">
-            <a href="https://drive.google.com/file/d/15TkSm0NkpDLXWrdg1hOLQUzOP4LIu1Yi/view?usp=sharing">Resume</a>
+            <a href="https://maroon-rycca-31.tiiny.site/">Resume</a>
             <Image src={open} alt="" className="w-6 h-6 ml-2" unoptimized />
           </div>
 
