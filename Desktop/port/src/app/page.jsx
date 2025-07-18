@@ -13,7 +13,6 @@ import leetcode from "@/app/images/icons8-leetcode-96.png";
 import linkedin from "@/app/images/icons8-linkedin-100.png";
 import open from "@/app/images/icons8-open-60.png";
 import twitter from "@/app/images/icons8-twitter-100.png";
-import bg from "@/app/images/v882-aew-55-a.jpg";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
 
 
@@ -68,9 +67,9 @@ export default function Home() {
 
   return (
     <div className="relative h-screen w-full">
-      <Image src={bg} alt="bg" className="fixed top-0 left-0 w-full h-screen object-cover" />
+      {/* <Image src={bg} alt="bg" className="fixed top-0 left-0 w-full h-screen object-cover" /> */}
 
-      <div className="overflow-y-scroll relative z-10 text-4xl font-grapeNuts font-bold text-white p-5">
+      <div className="overflow-y-scroll bg-zinc-50 relative z-10 text-4xl font-grapeNuts font-bold text-zinc-900 p-5">
         <div className="text-right w-full h-10 text-lg">
           {viewCount && <div>visitors: {viewCount}</div>}
         </div>
@@ -84,7 +83,7 @@ export default function Home() {
           />
 
             <div className="col-span-7">
-              <h1>Hi there, I am <span className="font-specialGothicExpandedOne text-6xl bg-gradient-to-r from-blue-600 via-white to-indigo-400 inline-block text-transparent bg-clip-text">YASH TIWARI</span></h1>
+              <h1>Hi there, I am <span className="text-7xl bg-gradient-to-r from-zinc-950 via-zinc-700 font-specialGothicExpandedOne to-zinc-950 inline-block text-transparent bg-clip-text">Yash Tiwari</span></h1>
               <h1 className="h-28">
                 I am into
                 <span className="font-specialGothicExpandedOne">
@@ -96,131 +95,122 @@ export default function Home() {
         </div>
 
         <div className="flex gap-2">
-          <div className="border-[1px] px-3 py-1 font-poppins text-lg flex">
+          <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 py-1 font-poppins text-lg flex">
             <a href="https://maroon-rycca-31.tiiny.site/">Resume</a>
-            <Image src={open} alt="" className="w-6 h-6 ml-2" unoptimized />
+            <Image src={open} alt="" className="w-6 h-6 ml-2 bg-black" unoptimized />
           </div>
 
-          <div className="border-[1px] px-3  py-1 font-poppins text-lg flex">
-            <a href="https://askyash.vercel.app/ " className="bg-gradient-to-r from-blue-600 via-zinc-300 to-indigo-400 inline-block text-transparent bg-clip-text">AI assistant</a>
-            <Image src={open} alt="" className="w-6 h-6 ml-2" unoptimized />
+          <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3  py-1 font-poppins text-lg flex">
+            <a href="https://askyash.vercel.app/ " className="bg-gradient-to-r from-blue-600 via-sky-700 to-indigo-400 inline-block text-transparent bg-clip-text">AI assistant</a>
+            <Image src={open} alt="" className="w-6 h-6 ml-2 bg-black" unoptimized />
           </div>
         </div>
 
         <Section title="Who Am I">
-          <p>Hi! 👋 I’m Yash Tiwari, a MERN developer from Noida. I specialize in creating full-stack web applications using MongoDB, Express.js, React, and Node.js. With expertise in building responsive designs and user-friendly interfaces, I transform ideas into scalable, high-performance solutions. Let’s connect!</p>
+          <p className="text-justify font-poppins text-lg">Hi! 👋 I’m Yash Tiwari, a MERN developer from Noida. I specialize in creating full-stack web applications using MongoDB, Express.js, React, and Node.js. With expertise in building responsive designs and user-friendly interfaces, I transform ideas into scalable, high-performance solutions. Let’s connect!</p>
         </Section>
 
         <div className="mt-10">
           <h1 className="font-specialGothicExpandedOne">Connect With Me</h1>
-          <div className="mt-5 flex flex-wrap gap-2">
-            <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
+          <div className="mt-5 flex flex-wrap gap-3">
+            <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
                 <a href="https://www.linkedin.com/in/yash-tiwari20/" >
                 LinkedIn
                 </a>
                 <Image
                   src={linkedin}
                   alt=""
-                  className="w-6 h-6 ml-2"
+                  className="w-6 h-6 ml-2 bg-black"
                   unoptimized
                 />
             </div>
-            <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
+            <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
                 <a href="https://github.com/yash700701" >
                 Github
                 </a>
                 <Image
                   src={github}
                   alt=""
-                  className="w-6 h-6 ml-2"
+                  className="w-6 h-6 ml-2 bg-black"
                   unoptimized
                 />
             </div>
-            <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
+            <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
                 <a href="https://www.instagram.com/yash_pandit_8/" >
                 Instagram
                 </a>
                 <Image
                   src={insta}
                   alt=""
-                  className="w-6 h-6 ml-2"
+                  className="w-6 h-6 ml-2 bg-black"
                   unoptimized
                 />
             </div>
-            <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
+            <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
                 <a href="https://leetcode.com/u/yash_tiwari700/" >
                 Leetcode
                 </a>
                 <Image
                   src={leetcode}
                   alt=""
-                  className="w-6 h-6 ml-2"
+                  className="w-6 h-6 ml-2 bg-black"
                   unoptimized
                 />
             </div>
-            <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
+            <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
                 <a href="https://x.com/yash_700757" >
                 Twitter
                 </a>
                 <Image
                   src={twitter}
                   alt=""
-                  className="w-6 h-6 ml-2"
+                  className="w-6 h-6 ml-2 bg-black"
                   unoptimized
                 />
             </div>
           </div>
         </div>
 
-        {/* <Section title="Tech Stack">
-          {["React", "MongoDB", "PostgresSQL", "Express", "NodeJs", "NextJs", "JavaScript", "Tailwind", "Html", "C++", "Figma", "Git", "Github", "C", "Postman", "Redux Toolkit", "Java", "Python"].map((tech, i) => (
-            <p key={i} className="font-poppins underline">{tech}</p>
-          ))}
-        </Section> */}
-
         <div className="mt-10">
           <h1 className="font-specialGothicExpandedOne">Tech Stack</h1>
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Frontend</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-            <p className="text-blue-400">React</p>
-            <p className="font-poppins underline text-zinc-600">NextJs</p>
-            <p className="font-poppins underline text-sky-400">Tailwind</p>
-            <p className="font-poppins underline text-orange-400">Html</p>
-            <p className="font-poppins underline text-orange-400">Figma</p>
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Frontend</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {["React", "NextJs", "Tailwind", "Html", "Figma"].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
           </div>
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Backend</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-            <p className="text-zinc-600">Express</p>
-            <p className="text-green-500">NodeJs</p>
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Backend</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {["Express", "NodeJs"].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
           </div>
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Database</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-            <p className="text-green-400">MongoDB</p>
-            <p className="text-sky-600">PostgresSQL</p>
-            <p className="text-pink-700">Appwrite</p>
-           
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Database</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {["MongoDB", "PostgresSQL", "Appwrite"].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
           </div>
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Devops</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-            <p className="font-poppins underline text-blue-500">Docker</p>
-          </div>
-
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Programming Language</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-             <p className="font-poppins underline text-yellow-300">JavaScript</p>
-             <p className="font-poppins underline text-blue-900">C++</p>
-             <p className="font-poppins underline text-blue-900">C</p>
-             <p className="font-poppins underline text-orange-300">Java</p>
-             <p className="font-poppins underline text-yellow-400">Python</p>
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Devops</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {["Docker"].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
           </div>
 
-          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl">Tools</h1>
-          <div className="mt-5 font-poppins underline flex flex-wrap text-2xl gap-2">
-             <p className="font-poppins underline text-red-500">Git</p>
-             <p className="font-poppins underline text-zinc-500">Github</p>
-             <p className="font-poppins underline text-orange-400">Postman</p>
-             <p className="font-poppins underline text-purple-600">Redux Toolkit</p>
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Programming Language</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {[ "JavaScript", "C++", "C", "Java", "Python"].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
           </div>
+
+          <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">Tools</h1>
+          <div className="flex flex-wrap text-lg mt-5 gap-2" >
+            {["Git", "Github", "Postman", "Redux Toolkit",].map((tech, i) => (
+              <p key={i} className="font-poppins px-3 border-[2px] rounded-lg shadow-zinc-300 bg-white shadow-lg underline">{tech}</p>
+            ))}
+         </div>
         </div>
 
         <div className="mt-10">
@@ -229,61 +219,65 @@ export default function Home() {
           <Image
             src={iconkit}
             alt=""
-            className=""
+            className="border-[1px] border-black"
             unoptimized
           />
-          <h1 className="mt-2"><span className="underline text-sky-500">IconKit</span> is a powerful online tool that helps you generate platform-specific app icons like iOS, Android, and Web icons in various sizes and shapes (circle, square, squircle, etc.). It supports customization like background color, padding, badges, and text overlays.
+          <h1 className="mt-2 text-justify text-lg font-poppins"><span className="underline text-sky-500">IconKit</span> is a powerful online tool that helps you generate platform-specific app icons like iOS, Android, and Web icons in various sizes and shapes (circle, square, squircle, etc.). It supports customization like background color, padding, badges, and text overlays.
           Now, IconKit also lets you generate AI-based images as icons using Gemini AI image generation, so you can create icons from text prompts too!</h1>
           <div className="flex flex-wrap gap-2 mt-2">
-            <a href="https://iconkit.vercel.app/" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-            <a href="https://github.com/yash700701/iconkit" className="border-[1px] px-3 font-poppins text-lg">Github</a>
+            <a href="https://iconkit.vercel.app/" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Link</a>
+            <a href="https://github.com/yash700701/iconkit" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Github</a>
           </div>
           </div>
           <div className="mt-16 text-2xl">
           <Image
             src={mimzy}
             alt=""
-            className=""
+            className="border-[1px] border-black"
             unoptimized
           />
-          <h1 className="mt-2"><span className="underline text-amber-600">Mimzy</span> is a fun and engaging social media platform where users can post memes, images, or videos and earn points for every post they make.
+          <h1 className="mt-2 text-justify text-lg font-poppins"><span className="underline text-amber-600">Mimzy</span> is a fun and engaging social media platform where users can post memes, images, or videos and earn points for every post they make.
           You can like, comment, and interact with any post, search for users, and easily login or logout. Mimzy focuses on reward-based content sharing to make posting and engaging more exciting.</h1>
           <div className="flex flex-wrap gap-2 mt-2">
-            <a href="https://mimzy.vercel.app/" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-            <a href="https://github.com/yash700701/memehub" className="border-[1px] px-3 font-poppins text-lg">Github</a>
+            <a href="https://mimzy.vercel.app/" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Link</a>
+            <a href="https://github.com/yash700701/memehub" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Github</a>
           </div>
           </div>
           <div className="mt-16 text-2xl">
           <Image
             src={report}
             alt=""
-            className=""
+            className="border-[1px] border-black"
             unoptimized
           />
-          <h1 className="mt-2"><span className="underline text-blue-600">The Report Management System</span> is a web app built with Next.js and MongoDB that helps organizations track daily employee activities. Employees can submit task reports, while admins can view, filter, and manage all submissions through a centralized dashboard for better transparency and productivity.</h1>
+          <h1 className="mt-2 text-justify text-lg font-poppins"><span className="underline text-blue-600">The Report Management System</span> is a web app built with Next.js and MongoDB that helps organizations track daily employee activities. Employees can submit task reports, while admins can view, filter, and manage all submissions through a centralized dashboard for better transparency and productivity.</h1>
           <div className="flex flex-wrap gap-2 mt-2">
-            <a href="https://afj-reports.vercel.app/" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-            <a href="https://github.com/yash700701/nextbyte" className="border-[1px] px-3 font-poppins text-lg">Github</a>
+            <a href="https://afj-reports.vercel.app/" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Link</a>
+            <a href="https://github.com/yash700701/nextbyte" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Github</a>
           </div>
           </div>
         </div>
 
         <Section title="Education">
-          <p>Bachelor of Technology in <span className="text-cyan-400">Computer Science</span> - GPA 8.52</p>
-          <p>JSS Academy of Technical Education 2023 - 27</p>
-          <p>Class XII (CBSE) - 94%</p>
-          <p>Class X (CBSE) - 95%</p>
+         <div className="text-lg font-poppins">
+            <p>Bachelor of Technology in <span className="text-sky-600">Computer Science</span> - GPA 8.52</p>
+            <p>JSS Academy of Technical Education 2023 - 27</p>
+            <p>Class XII (CBSE) - 94%</p>
+            <p>Class X (CBSE) - 95%</p>
+         </div>
         </Section>
 
         <Section title="Work Experience">
-          <p>FullStack Developer intern @<span className="text-sky-600">byteEdu</span></p>
-          <p>Nov 2024 - Apr 2025</p>
-          <a href="https://drive.google.com/file/d/1yC2e_nV5FdCdenWg6GwVKMjoKXIF2MKx/view" className="underline"><p>Internship Completion</p></a>
-          <a href="https://drive.google.com/file/d/1PNMOx5FjNNmabysvpghFzG3eRsLZTgKC/view" className="underline"><p>Letter of Recommendation</p></a>
+          <div className="text-lg font-poppins">
+            <p>FullStack Developer intern @<a href="https://www.linkedin.com/company/byteedu/posts/?feedView=all" className="text-sky-600">byteEdu</a></p>
+            <p>Nov 2024 - Apr 2025</p>
+            <a href="https://drive.google.com/file/d/1yC2e_nV5FdCdenWg6GwVKMjoKXIF2MKx/view" className="underline"><p className="text-sky-600">Internship Completion</p></a>
+            <a href="https://drive.google.com/file/d/1PNMOx5FjNNmabysvpghFzG3eRsLZTgKC/view" className="underline"><p className="text-sky-600">Letter of Recommendation</p></a>
+          </div>
         </Section>
 
         <Section title="Drop a Message">
-          <form className="space-y-4 my-5" onSubmit={handleSubmit}>
+          <form className="space-y-4 my-5 font-poppins" onSubmit={handleSubmit}>
             {["name", "email"].map((field) => (
               <input
                 key={field}
@@ -310,7 +304,7 @@ export default function Home() {
             ></textarea>
 
             <div className="text-center text-green-400 mt-4">{resultMessage}</div>
-            <button type="submit" disabled={isLoading} className="mt-1 py-1 border-[1px] w-full">
+            <button type="submit" disabled={isLoading} className="mt-1 py-1 bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-full">
               {isLoading ? "Sending..." : "Send"}
             </button>
           </form>

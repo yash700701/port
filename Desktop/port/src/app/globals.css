@@ -5,7 +5,7 @@
   @keyframes glow {
   
     50% {
-      box-shadow: 5px 0 15px 0 skyblue, 0 5px 15px 0 white;
+      box-shadow: 5px 0 15px 0 skyblue, 0 5px 15px 0 black;
     }
   }
 
