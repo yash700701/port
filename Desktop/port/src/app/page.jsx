@@ -14,6 +14,7 @@ import linkedin from "@/app/images/icons8-linkedin-100.png";
 import open from "@/app/images/icons8-open-60.png";
 import twitter from "@/app/images/icons8-twitter-100.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
+import GitHubCalendar from 'react-github-calendar';
 
 
 export default function Home() {
@@ -21,6 +22,16 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [resultMessage, setResultMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const eS = 116;
+  const eQ = 885;
+  const mS = 75;
+  const mQ = 1883;
+  const hS = 0;
+  const hQ = 853;
+  const percentageEasy = (eS / eQ) * 100;
+  const percentageMedium = (mS / mQ) * 100;
+  const percentageHard = (hS / hQ) * 100;
 
 
   useEffect(() => {
@@ -70,7 +81,7 @@ export default function Home() {
       {/* <Image src={bg} alt="bg" className="fixed top-0 left-0 w-full h-screen object-cover" /> */}
 
       <div className="overflow-y-scroll bg-zinc-50 relative z-10 text-4xl font-grapeNuts font-bold text-zinc-900 p-5">
-        <div className="text-right w-full h-10 text-lg">
+        <div className="text-right w-full h-10 text-lg border-b-[2px]">
           {viewCount && <div>visitors: {viewCount}</div>}
         </div>
 
@@ -257,6 +268,77 @@ export default function Home() {
           </div>
           </div>
         </div>
+
+        <Section title="Contributions">
+           <GitHubCalendar
+            username="yash700701"
+            theme={{
+              light: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127'],
+              dark: ['#ebedf0', '#6c757d', '#495057', '#343a40', '#212529'],
+            }}
+            colorScheme="dark" // optional
+          />
+        </Section>
+
+        <Section title="Leetcode">
+         <div className="text-lg font-poppins">
+            <p>Easy</p>
+            <div style={{ width: '100%' }} className="mt-2">
+              <div style={{
+                background: '#ebedf0',
+                height: '10px',
+                maxWidth: '850px'
+             
+              }}>
+                <div style={{
+                  width: `${percentageEasy}%`,
+                  background: '#000000',
+                  height: '100%',
+                  transition: 'width 0.3s ease'
+                }} />
+              </div>
+              <p style={{ margin: 0, color: '#aaa', fontSize: '12px' }}>{eS} / {eQ}</p>
+            </div>
+         </div>
+         <div className="text-lg font-poppins">
+            <p>Medium</p>
+            <div style={{ width: '100%' }} className="mt-2">
+              <div style={{
+                background: '#ebedf0',
+                height: '10px',
+                maxWidth: '850px'
+             
+              }}>
+                <div style={{
+                  width: `${percentageMedium}%`,
+                  background: '#000000',
+                  height: '100%',
+                  transition: 'width 0.3s ease'
+                }} />
+              </div>
+              <p style={{ margin: 0, color: '#aaa', fontSize: '12px' }}>{mS} / {mQ}</p>
+            </div>
+         </div>
+         <div className="text-lg font-poppins">
+            <p>Hard</p>
+            <div style={{ width: '100%' }} className="mt-2">
+              <div style={{
+                background: '#ebedf0',
+                height: '10px',
+                maxWidth: '850px'
+             
+              }}>
+                <div style={{
+                  width: `${percentageHard}%`,
+                  background: '#000000',
+                  height: '100%',
+                  transition: 'width 0.3s ease'
+                }} />
+              </div>
+              <p style={{ margin: 0, color: '#aaa', fontSize: '12px' }}>{hS} / {hQ}</p>
+            </div>
+         </div>
+        </Section>
 
         <Section title="Education">
          <div className="text-lg font-poppins">
