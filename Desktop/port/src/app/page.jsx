@@ -15,6 +15,9 @@ import open from "@/app/images/icons8-open-60.png";
 import twitter from "@/app/images/icons8-twitter-100.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
 import GitHubCalendar from 'react-github-calendar';
+// import LeetCodeCalendar from 'leetcode-calendar';
+
+import {LeetCodeCalendar} from '@yashx700/leetcodecalendar'
 
 
 export default function Home() {
@@ -338,6 +341,26 @@ export default function Home() {
               <p style={{ margin: 0, color: '#aaa', fontSize: '12px' }}>{hS} / {hQ}</p>
             </div>
          </div>
+
+         <div className="w-full overflow-x-scroll mt-5" >
+            <LeetCodeCalendar
+              username="yash_tiwari700"
+              blockSize={12}
+              blockMargin={3}
+              fontSize={14}
+              theme={{
+                background: 'transparent',
+                text: '#000000ff',
+                level0: '#ebedf0',
+                level1: '#6c757d',
+                level2: '#495057',
+                level3: '#343a40',
+                level4: '#212529',
+              }}
+              style={{ padding: '0px' }}
+          />
+         </div>
+
         </Section>
 
         <Section title="Education">
