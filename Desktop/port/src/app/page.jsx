@@ -16,7 +16,6 @@ import open from "@/app/images/icons8-open-60.png";
 import twitter from "@/app/images/icons8-twitter-100.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
 import GitHubCalendar from 'react-github-calendar';
-// import LeetCodeCalendar from 'leetcode-calendar';
 
 import {LeetCodeCalendar} from '@yashx700/leetcodecalendar'
 
