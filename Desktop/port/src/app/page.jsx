@@ -6,6 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 import iconkit from "@/app/images/Screenshot 2025-06-30 181011.png";
 import mimzy from "@/app/images/Screenshot 2025-06-05 204735.png";
+import npmLeetcodeCalendar from "@/app/images/npmLeetcodeCalendar.png";
 import report from "@/app/images/Screenshot 2025-06-05 205655.png";
 import github from "@/app/images/icons8-github-128.png";
 import insta from "@/app/images/icons8-instagram-logo-100.png";
@@ -241,6 +242,19 @@ export default function Home() {
           <div className="flex flex-wrap gap-2 mt-2">
             <a href="https://iconkit.vercel.app/" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Link</a>
             <a href="https://github.com/yash700701/iconkit" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Github</a>
+          </div>
+          </div>
+          <div className="mt-16 text-2xl">
+          <Image
+            src={npmLeetcodeCalendar}
+            alt=""
+            className="border-[1px] border-black"
+            unoptimized
+          />
+          <h1 className="mt-2 text-justify text-lg font-poppins"><span className="underline text-green-700">LeetCode Calendar</span> is an open-source React component that visualizes LeetCode activity in a GitHub-style contribution calendar. It supports full customization of block size, spacing, fonts, themes, and layout, making it easy for developers to showcase their coding streaks. Published on npm as @yashx700/leetcodecalendar, it's designed for easy installation and integration into personal websites or dashboards.</h1>
+          <div className="flex flex-wrap gap-2 mt-2">
+            <a href="https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Link</a>
+            <a href="https://github.com/yash700701/leetcodecalendar" className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg">Github</a>
           </div>
           </div>
           <div className="mt-16 text-2xl">
