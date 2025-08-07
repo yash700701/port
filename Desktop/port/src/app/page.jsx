@@ -16,6 +16,7 @@ import open from "@/app/images/icons8-open-60.png";
 import twitter from "@/app/images/icons8-twitter-100.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
 import GitHubCalendar from 'react-github-calendar';
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 import {LeetCodeCalendar} from '@yashx700/leetcodecalendar'
 
@@ -35,7 +36,6 @@ export default function Home() {
   const percentageEasy = (eS / eQ) * 100;
   const percentageMedium = (mS / mQ) * 100;
   const percentageHard = (hS / hQ) * 100;
-
 
   useEffect(() => {
     const fetchViewCount = async () => {
@@ -97,7 +97,7 @@ export default function Home() {
           />
 
             <div className="col-span-7">
-              <h1>Hi there, I am <span className="text-7xl bg-gradient-to-r from-zinc-950 via-zinc-700 font-specialGothicExpandedOne to-zinc-950 inline-block text-transparent bg-clip-text">Yash Tiwari</span></h1>
+              <h1>Hi there, I am <AuroraText className="font-specialGothicExpandedOne">Yash Tiwari</AuroraText></h1>
               <h1 className="h-28">
                 I am into
                 <span className="font-specialGothicExpandedOne">
@@ -295,7 +295,6 @@ export default function Home() {
             colorScheme="dark" // optional
           />
         </Section>
-
         <Section title="Leetcode">
          <div className="text-lg font-poppins">
             <p>Easy</p>
@@ -387,6 +386,12 @@ export default function Home() {
 
         <Section title="Work Experience">
           <div className="text-lg font-poppins">
+            <p>FullStack Developer intern @<a href="https://www.linkedin.com/company/kartavyatech/posts/?feedView=all" className="text-sky-600">Kartavya Technologies</a></p>
+            <p>Aug 2025 - Present</p>
+            {/* <a href="https://drive.google.com/file/d/1yC2e_nV5FdCdenWg6GwVKMjoKXIF2MKx/view" className="underline"><p className="text-sky-600">Internship Completion</p></a>
+            <a href="https://drive.google.com/file/d/1PNMOx5FjNNmabysvpghFzG3eRsLZTgKC/view" className="underline"><p className="text-sky-600">Letter of Recommendation</p></a> */}
+          </div>
+          <div className="text-lg mt-10 font-poppins">
             <p>FullStack Developer intern @<a href="https://www.linkedin.com/company/byteedu/posts/?feedView=all" className="text-sky-600">byteEdu</a></p>
             <p>Nov 2024 - Apr 2025</p>
             <a href="https://drive.google.com/file/d/1yC2e_nV5FdCdenWg6GwVKMjoKXIF2MKx/view" className="underline"><p className="text-sky-600">Internship Completion</p></a>
@@ -438,259 +443,3 @@ const Section = ({ title, children }) => (
     <div className="mt-5 text-2xl">{children}</div>
   </div>
 );
-
-
-
-
-
-
-
-
-
-
-
-
-//  <div className="text-right w-full h-10 text-lg">{viewCount && ( <div>visitors: {viewCount}</div> ) }</div>
-
-//     <div className="mt-10 grid sm:grid-cols-10 ">
-//        {/* <div className=" col-span-2 flex justify-center mt-5">
-//          <Image
-//         src={smile}
-//         alt=""
-//         className="w-20 h-20 rounded-full shadow-2xl shadow-white"
-//         unoptimized
-//       />
-//        </div> */}
-//        <div className="col-span-8 mt-9 sm:mt-0">
-//         <h1 className="">Hi there, i am <span className="font-specialGothicExpandedOne text-6xl text-emerald-400">YASH TIWARI</span></h1>
-//         <h1 className=" h-28">i am into  
-//           <span className="font-specialGothicExpandedOne">
-//             <Typewriter
-//               words={[' Web Development', ' Design', ' Programming']}
-//               loop={false}
-//               cursor
-//               cursorStyle=" !"
-//               typeSpeed={100}
-//               deleteSpeed={50}
-//             />
-//           </span>
-//         </h1>
-//        </div>
-//     </div>
-
-//     <div className="border-[1px] px-3 w-32 py-1 font-poppins text-lg flex ">
-//       <a href="https://drive.google.com/file/d/15TkSm0NkpDLXWrdg1hOLQUzOP4LIu1Yi/view?usp=sharing" >
-//       Resume
-//       </a>
-//       <Image
-//         src={open}
-//         alt=""
-//         className="w-6 h-6 ml-2"
-//         unoptimized
-//       />
-//     </div>
-  
-//     <div className="mt-10">
-//       <h1 className="font-specialGothicExpandedOne">Who Am I</h1>
-//       <h1 className="mt-5">Hi! 👋 I’m Yash Tiwari, a MERN developer from Noida. I specialize in creating full-stack web applications using MongoDB, Express.js, React, and Node.js. With expertise in building responsive designs and user-friendly interfaces, I transform ideas into scalable, high-performance solutions. Let’s connect!</h1>
-//     </div>
-    // <div className="mt-10">
-    //   <h1 className="font-specialGothicExpandedOne">Connect With Me</h1>
-    //   <div className="mt-5 flex flex-wrap gap-2">
-    //      <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
-    //         <a href="" >
-    //         LinkedIn
-    //         </a>
-    //         <Image
-    //           src={linkedin}
-    //           alt=""
-    //           className="w-6 h-6 ml-2"
-    //           unoptimized
-    //         />
-    //      </div>
-    //      <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
-    //         <a href="" >
-    //         Github
-    //         </a>
-    //         <Image
-    //           src={github}
-    //           alt=""
-    //           className="w-6 h-6 ml-2"
-    //           unoptimized
-    //         />
-    //      </div>
-    //      <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
-    //         <a href="" >
-    //         Instagram
-    //         </a>
-    //         <Image
-    //           src={insta}
-    //           alt=""
-    //           className="w-6 h-6 ml-2"
-    //           unoptimized
-    //         />
-    //      </div>
-    //      <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
-    //         <a href="" >
-    //         Leetcode
-    //         </a>
-    //         <Image
-    //           src={leetcode}
-    //           alt=""
-    //           className="w-6 h-6 ml-2"
-    //           unoptimized
-    //         />
-    //      </div>
-    //      <div className="border-[1px] items-center px-3 py-1 font-poppins text-lg flex ">
-    //         <a href="" >
-    //         Twitter
-    //         </a>
-    //         <Image
-    //           src={twitter}
-    //           alt=""
-    //           className="w-6 h-6 ml-2"
-    //           unoptimized
-    //         />
-    //      </div>
-    //   </div>
-    // </div>
-//     <div className="mt-10">
-//       <h1 className="font-specialGothicExpandedOne">Tech Stack</h1>
-//       <div className="mt-5 flex flex-wrap text-2xl gap-2">
-//         <p className="font-poppins underline text-blue-400">React</p>
-//         <p className="font-poppins underline text-green-400">MongoDB</p>
-//         <p className="font-poppins underline text-sky-600">PostgresSQL</p>
-//         <p className="font-poppins underline text-zinc-600">Express</p>
-//         <p className="font-poppins underline text-green-500">NodeJs</p>
-//         <p className="font-poppins underline text-zinc-600">NextJs</p>
-//         <p className="font-poppins underline text-yellow-300">JavaScript</p>
-//         <p className="font-poppins underline text-sky-400">Tailwind</p>
-//         <p className="font-poppins underline text-orange-400">Html</p>
-//         <p className="font-poppins underline text-blue-900">C++</p>
-//         <p className="font-poppins underline text-orange-400">Figma</p>
-//         <p className="font-poppins underline text-red-500">Git</p>
-//         <p className="font-poppins underline text-zinc-500">Github</p>
-//         <p className="font-poppins underline text-blue-900">C</p>
-//         <p className="font-poppins underline text-orange-400">Postman</p>
-//         <p className="font-poppins underline text-purple-600">Redux Toolkit</p>
-//         <p className="font-poppins underline text-orange-300">Java</p>
-//         <p className="font-poppins underline text-yellow-400">Python</p>
-//       </div>
-//     </div>
-    // <div className="mt-10">
-    //   <h1 className="font-specialGothicExpandedOne">Things I've Made</h1>
-    //   <div className="mt-5 text-2xl">
-    //    <Image
-    //      src={iconkit}
-    //      alt=""
-    //      className=""
-    //      unoptimized
-    //    />
-    //    <h1 className="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto veritatis ratione deleniti, illo quaerat nemo ?</h1>
-    //    <div className="flex flex-wrap gap-2 mt-2">
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Github</a>
-    //    </div>
-    //   </div>
-    //   <div className="mt-16 text-2xl">
-    //    <Image
-    //      src={mimzy}
-    //      alt=""
-    //      className=""
-    //      unoptimized
-    //    />
-    //    <h1 className="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto veritatis ratione deleniti, illo quaerat nemo </h1>
-    //    <div className="flex flex-wrap gap-2 mt-2">
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Github</a>
-    //    </div>
-    //   </div>
-    //   <div className="mt-16 text-2xl">
-    //    <Image
-    //      src={report}
-    //      alt=""
-    //      className=""
-    //      unoptimized
-    //    />
-    //    <h1 className="mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto veritatis ratione deleniti, illo quaerat nemo </h1>
-    //    <div className="flex flex-wrap gap-2 mt-2">
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Link</a>
-    //     <a href="" className="border-[1px] px-3 font-poppins text-lg">Github</a>
-    //    </div>
-    //   </div>
-    // </div>
-
-//     <div className="mt-10">
-//       <h1 className="font-specialGothicExpandedOne">Education</h1>
-//       <h1 className="mt-5">Bachelor of Technology in <span className="text-cyan-400">Computer Science</span> - gpa 8.52 </h1>
-//       <h1 className="mt-2 text-2xl">JSS Academy of Technical Education 2023 - 27 </h1>
-//       <h1 className="mt-5">Class XII (CBSE) - 94%</h1>
-//       <h1 className="mt-2">Class X (CBSE) - 95%</h1>
-//     </div>
-
-//     <div className="mt-10">
-//       <h1 className="font-specialGothicExpandedOne">Work Experience</h1>
-//       <h1 className="mt-5">FullStack Developer intern @<span className="text-sky-600">byteEdu</span></h1>
-//       <h1 className="mt-2 text-2xl">Nov 2024 - Apr 2025 </h1>
-//       <a href="" className="mt-5 underline"><p>Internship Completion</p></a>
-//       <a href="" className="mt-5 underline"><p>Letter of Recommendation</p></a>
-//     </div>
-
-//     <div className="mt-10">
-//       <h1 className="font-specialGothicExpandedOne">Drop a Message</h1>
-//        <form className="space-y-4 my-5" onSubmit={handleSubmit}>
-//           {/* Name Field */}
-//           <div>
-//             <input
-//               type="text"
-//               id="name"
-//               name="name"
-//               value={formData.name}
-//               onChange={handleChange}
-//               required
-//               placeholder="Your Name"
-//               className="mt-1 py-1 border-b-[1px] w-full "
-//             />
-//           </div>
-
-//           {/* Email Field */}
-//           <div>
-//             <input
-//               type="email"
-//               id="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleChange}
-//               required
-//               placeholder="Your Email"
-//               className="mt-1 py-1 border-b-[1px] w-full "
-//             />
-//           </div>
-
-//           {/* Message Field */}
-//           <div>
-//             <textarea
-//               id="message"
-//               name="message"
-//               value={formData.message}
-//               onChange={handleChange}
-//               required
-//               rows="4"
-//               placeholder="Your Message"
-//              className="mt-1 py-1 border-b-[1px] w-full "
-//             ></textarea>
-//           </div>
-
-//           {/* Submit Button */}
-//           <div className="text-center text-green-400 mt-4">{resultMessage}</div>
-//           <button
-//             type="submit"
-//             disabled={isLoading}
-//            className="mt-1 py-1 border-[1px] w-full "
-//           >
-//             {isLoading ? "Sending..." : "Send"}
-//           </button>
-
-//           {/* Result Message */}
-//         </form>
-//     </div>
