@@ -8,17 +8,18 @@ import iconkit from "@/app/images/Screenshot 2025-06-30 181011.png";
 import mimzy from "@/app/images/Screenshot 2025-06-05 204735.png";
 import npmLeetcodeCalendar from "@/app/images/npmLeetcodeCalendar.png";
 import report from "@/app/images/Screenshot 2025-06-05 205655.png";
-import github from "@/app/images/icons8-github-128.png";
-import insta from "@/app/images/icons8-instagram-logo-100.png";
+import github from "@/app/images/github.png";
+import insta from "@/app/images/instagram.png";
 import leetcode from "@/app/images/icons8-leetcode-96.png";
-import linkedin from "@/app/images/icons8-linkedin-100.png";
-import open from "@/app/images/icons8-open-60.png";
-import twitter from "@/app/images/icons8-twitter-100.png";
+import linkedin from "@/app/images/linkedin.png";
+import open from "@/app/images/share.png";
+import twitter from "@/app/images/twitter.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
 import GitHubCalendar from "react-github-calendar";
 import { AuroraText } from "@/components/magicui/aurora-text";
 
 import { LeetCodeCalendar } from "@yashx700/leetcodecalendar";
+import { ins } from "motion/react-client";
 
 export default function Home() {
     const [viewCount, setViewCount] = useState();
@@ -90,21 +91,36 @@ export default function Home() {
     };
 
     return (
-        <div className="relative bg-zinc-50 md:px-64 w-full">
+        <div className="relative bg-zinc-50 md:px-60 w-full">
             {/* <Image src={bg} alt="bg" className="fixed top-0 left-0 w-full h-screen object-cover" /> */}
 
-            <div className="overflow-y-scroll  relative z-10 text-4xl font-grapeNuts font-bold text-zinc-900 p-5">
-                <div className="text-right w-full h-10 text-lg border-b-[2px]">
-                    {viewCount && <div>visitors: {viewCount}</div>}
+            <div className="overflow-y-scroll px-3  relative z-10 text-4xl font-grapeNuts font-bold text-zinc-900 ">
+                <div className="w-full h-14 text-lg border-b-[2px] flex items-center justify-between">
+                    <div></div>
+                    <div>
+                        {viewCount && (
+                            <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-2 py-1">
+                                visitors: {viewCount}
+                            </div>
+                        )}
+                    </div>
                 </div>
 
                 <div className="mt-10 grid sm:grid-cols-10">
-                    <div className="col-span-8 mt-9 grid sm:grid-cols-10 sm:mt-0">
-                        <Image
-                            src={yash}
-                            alt="bg"
-                            className="w-40 h-40 mb-5 col-span-3 object-cover border-[1px] rounded-lg border-white animate-glow"
-                        />
+                    <div className="col-span-8 mt-9 grid sm:grid-cols-10 gap-5 sm:mt-0">
+                        <div className="col-span-3 bg-zinc-100 flex justify-center items-center rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white w-40 h-40 relative overflow-hidden">
+                            <Image
+                                src={yash}
+                                alt="bg"
+                                className="w-36 h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans  bottom-0 left-0 p-2">
+                                <span className="text-white font-extralight px-2 text-xs">
+                                    ∘ 2024
+                                </span>
+                            </div>
+                        </div>
 
                         <div className="col-span-7">
                             <h1>
@@ -135,27 +151,26 @@ export default function Home() {
                 </div>
 
                 <div className="flex gap-2">
-                    <div className=" border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 py-1 font-poppins text-lg flex">
+                    <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                         <a href="https://aqua-brandy-94.tiiny.site/">Resume</a>
                         <Image
                             src={open}
                             alt=""
-                            className="w-6 h-6 ml-2 bg-black"
+                            className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                             unoptimized
                         />
                     </div>
-
-                    <div className=" border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3  py-1 font-poppins text-lg flex">
-                        <a
+                    <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                         <a
                             href="https://askyash.vercel.app/ "
                             className="bg-gradient-to-r from-blue-600 via-sky-700 to-indigo-400 inline-block text-transparent bg-clip-text"
                         >
-                            AI assistant
+                            AI Assistant
                         </a>
                         <Image
                             src={open}
                             alt=""
-                            className="w-6 h-6 ml-2 bg-black"
+                            className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                             unoptimized
                         />
                     </div>
@@ -177,56 +192,66 @@ export default function Home() {
                         Connect With Me
                     </h1>
                     <div className="mt-5 flex flex-wrap gap-3">
-                        <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
+                        <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                             <a href="https://www.linkedin.com/in/yash-tiwari20/">
                                 LinkedIn
                             </a>
-                            <Image
+                           <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                             <Image
                                 src={linkedin}
                                 alt=""
-                                className="w-6 h-6 ml-2 bg-black"
+                                className="w-6 h-6 cursor-pointer p-1"
                                 unoptimized
                             />
+                           </div>
                         </div>
-                        <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
+                        <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                             <a href="https://github.com/yash700701">Github</a>
-                            <Image
+                            <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                             <Image
                                 src={github}
                                 alt=""
-                                className="w-6 h-6 ml-2 bg-black"
+                                className="w-6 h-6 cursor-pointer p-1"
                                 unoptimized
                             />
+                           </div>
                         </div>
-                        <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
+                        <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex ">
                             <a href="https://www.instagram.com/yash_pandit_8/">
                                 Instagram
                             </a>
-                            <Image
+                            <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                             <Image
                                 src={insta}
                                 alt=""
-                                className="w-6 h-6 ml-2 bg-black"
+                                className="w-6 h-6 cursor-pointer p-1"
                                 unoptimized
                             />
+                           </div>
                         </div>
-                        <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
+                        <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                             <a href="https://leetcode.com/u/yash_tiwari700/">
                                 Leetcode
                             </a>
-                            <Image
+                            <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                             <Image
                                 src={leetcode}
                                 alt=""
-                                className="w-6 h-6 ml-2 bg-black"
+                                className="w-6 h-6 cursor-pointer p-1"
                                 unoptimized
                             />
+                           </div>
                         </div>
-                        <div className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] items-center px-3 py-1 font-poppins text-lg flex ">
+                        <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex ">
                             <a href="https://x.com/yash_700757">Twitter</a>
-                            <Image
+                            <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                             <Image
                                 src={twitter}
                                 alt=""
-                                className="w-6 h-6 ml-2 bg-black"
+                                className="w-6 h-6 cursor-pointer p-1"
                                 unoptimized
                             />
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -243,7 +268,7 @@ export default function Home() {
                             (tech, i) => (
                                 <p
                                     key={i}
-                                    className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                    className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                 >
                                     {tech}
                                 </p>
@@ -257,7 +282,7 @@ export default function Home() {
                         {["Express", "NodeJs"].map((tech, i) => (
                             <p
                                 key={i}
-                                className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                             >
                                 {tech}
                             </p>
@@ -271,7 +296,7 @@ export default function Home() {
                             (tech, i) => (
                                 <p
                                     key={i}
-                                    className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                    className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                                 >
                                     {tech}
                                 </p>
@@ -285,7 +310,7 @@ export default function Home() {
                         {["Docker"].map((tech, i) => (
                             <p
                                 key={i}
-                                className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                             >
                                 {tech}
                             </p>
@@ -300,7 +325,7 @@ export default function Home() {
                             (tech, i) => (
                                 <p
                                     key={i}
-                                    className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                    className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                                 >
                                     {tech}
                                 </p>
@@ -316,7 +341,7 @@ export default function Home() {
                             (tech, i) => (
                                 <p
                                     key={i}
-                                    className="font-poppins px-3 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white underline"
+                                    className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                                 >
                                     {tech}
                                 </p>
@@ -332,12 +357,12 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="mt-5 text-2xl">
                             <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
-                              <Image
-                                src={iconkit}
-                                alt=""
-                                className=" rounded-lg"
-                                unoptimized
-                            />
+                                <Image
+                                    src={iconkit}
+                                    alt=""
+                                    className=" rounded-lg"
+                                    unoptimized
+                                />
                             </div>
                             <h1 className="mt-2 text-justify text-lg font-poppins">
                                 <span className="underline text-sky-500">
@@ -369,14 +394,14 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="mt-16 text-2xl">
-                           <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
-                             <Image
-                                src={npmLeetcodeCalendar}
-                                alt=""
-                                className="rounded-sm"
-                                unoptimized
-                            />
-                           </div>
+                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                                <Image
+                                    src={npmLeetcodeCalendar}
+                                    alt=""
+                                    className="rounded-sm"
+                                    unoptimized
+                                />
+                            </div>
                             <h1 className="mt-2 text-justify text-lg font-poppins">
                                 <span className="underline text-green-700">
                                     LeetCode Calendar
@@ -408,14 +433,14 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="mt-16 text-2xl">
-                           <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
-                             <Image
-                                src={mimzy}
-                                alt=""
-                                className="rounded-sm"
-                                unoptimized
-                            />
-                           </div>
+                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                                <Image
+                                    src={mimzy}
+                                    alt=""
+                                    className="rounded-sm"
+                                    unoptimized
+                                />
+                            </div>
                             <h1 className="mt-2 text-justify text-lg font-poppins">
                                 <span className="underline text-amber-600">
                                     Mimzy
@@ -444,14 +469,14 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="mt-16 text-2xl">
-                           <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
-                             <Image
-                                src={report}
-                                alt=""
-                                className="rounded-sm"
-                                unoptimized
-                            />
-                           </div>
+                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                                <Image
+                                    src={report}
+                                    alt=""
+                                    className="rounded-sm"
+                                    unoptimized
+                                />
+                            </div>
                             <h1 className="mt-2 text-justify text-lg font-poppins">
                                 <span className="underline text-blue-600">
                                     The Report Management System
