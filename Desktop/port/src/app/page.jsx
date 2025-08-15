@@ -161,7 +161,7 @@ export default function Home() {
                         />
                     </div>
                     <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                         <a
+                        <a
                             href="https://askyash.vercel.app/ "
                             className="bg-gradient-to-r from-blue-600 via-sky-700 to-indigo-400 inline-block text-transparent bg-clip-text"
                         >
@@ -196,62 +196,62 @@ export default function Home() {
                             <a href="https://www.linkedin.com/in/yash-tiwari20/">
                                 LinkedIn
                             </a>
-                           <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
-                             <Image
-                                src={linkedin}
-                                alt=""
-                                className="w-6 h-6 cursor-pointer p-1"
-                                unoptimized
-                            />
-                           </div>
+                            <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
+                                <Image
+                                    src={linkedin}
+                                    alt=""
+                                    className="w-6 h-6 cursor-pointer p-1"
+                                    unoptimized
+                                />
+                            </div>
                         </div>
                         <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                             <a href="https://github.com/yash700701">Github</a>
                             <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
-                             <Image
-                                src={github}
-                                alt=""
-                                className="w-6 h-6 cursor-pointer p-1"
-                                unoptimized
-                            />
-                           </div>
+                                <Image
+                                    src={github}
+                                    alt=""
+                                    className="w-6 h-6 cursor-pointer p-1"
+                                    unoptimized
+                                />
+                            </div>
                         </div>
                         <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex ">
                             <a href="https://www.instagram.com/yash_pandit_8/">
                                 Instagram
                             </a>
                             <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
-                             <Image
-                                src={insta}
-                                alt=""
-                                className="w-6 h-6 cursor-pointer p-1"
-                                unoptimized
-                            />
-                           </div>
+                                <Image
+                                    src={insta}
+                                    alt=""
+                                    className="w-6 h-6 cursor-pointer p-1"
+                                    unoptimized
+                                />
+                            </div>
                         </div>
                         <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                             <a href="https://leetcode.com/u/yash_tiwari700/">
                                 Leetcode
                             </a>
                             <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
-                             <Image
-                                src={leetcode}
-                                alt=""
-                                className="w-6 h-6 cursor-pointer p-1"
-                                unoptimized
-                            />
-                           </div>
+                                <Image
+                                    src={leetcode}
+                                    alt=""
+                                    className="w-6 h-6 cursor-pointer p-1"
+                                    unoptimized
+                                />
+                            </div>
                         </div>
                         <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex ">
                             <a href="https://x.com/yash_700757">Twitter</a>
                             <div className="h-7 w-7 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ml-2 flex justify-center items-center">
-                             <Image
-                                src={twitter}
-                                alt=""
-                                className="w-6 h-6 cursor-pointer p-1"
-                                unoptimized
-                            />
-                           </div>
+                                <Image
+                                    src={twitter}
+                                    alt=""
+                                    className="w-6 h-6 cursor-pointer p-1"
+                                    unoptimized
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -355,16 +355,16 @@ export default function Home() {
                         Things I've Made
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div className="mt-5 text-2xl">
-                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                        <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
+                            <div className="p-2  ">
                                 <Image
                                     src={iconkit}
                                     alt=""
-                                    className=" rounded-lg"
+                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                     unoptimized
                                 />
                             </div>
-                            <h1 className="mt-2 text-justify text-lg font-poppins">
+                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
                                 <span className="underline text-sky-500">
                                     IconKit
                                 </span>{" "}
@@ -378,31 +378,41 @@ export default function Home() {
                                 using Gemini AI image generation, so you can
                                 create icons from text prompts too!
                             </h1>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                                <a
-                                    href="https://iconkit.vercel.app/"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Link
-                                </a>
-                                <a
-                                    href="https://github.com/yash700701/iconkit"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Github
-                                </a>
+                            <div className="flex flex-wrap p-2 gap-2 mt-2">
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://iconkit.vercel.app/">
+                                        Link
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
+
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://github.com/yash700701/iconkit">
+                                        Github
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
                             </div>
                         </div>
-                        <div className="mt-16 text-2xl">
-                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                        <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
+                            <div className="p-2">
                                 <Image
                                     src={npmLeetcodeCalendar}
                                     alt=""
-                                    className="rounded-sm"
+                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                     unoptimized
-                                />
-                            </div>
-                            <h1 className="mt-2 text-justify text-lg font-poppins">
+                                />                            </div>
+                            <h1 className="mt-2 text-justify text-lg font-sans font-light px-2">
                                 <span className="underline text-green-700">
                                     LeetCode Calendar
                                 </span>{" "}
@@ -417,19 +427,30 @@ export default function Home() {
                                 integration into personal websites or
                                 dashboards.
                             </h1>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                                <a
-                                    href="https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Link
-                                </a>
-                                <a
-                                    href="https://github.com/yash700701/leetcodecalendar"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Github
-                                </a>
+                            <div className="flex flex-wrap gap-2 mt-2 p-2">
+                                 <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar">
+                                        Link
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
+
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://github.com/yash700701/leetcodecalendar">
+                                        Github
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className="mt-16 text-2xl">
