@@ -18,6 +18,8 @@ import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jp
 import frontendBg from "../../public/mehdi-mirzaie-kUe-dIOu5FE-unsplash.jpg";
 import devop from "../../public/devop.jpg";
 import backend from "../../public/florian-krumm-yLDabpoCL3s-unsplash.jpg";
+import programming from "../../public/programming.jpg";
+import tool from "../../public/tool.jpg";
 import db from "../../public/db.jpg";
 import GitHubCalendar from "react-github-calendar";
 import { AuroraText } from "@/components/magicui/aurora-text";
@@ -382,14 +384,14 @@ export default function Home() {
                     <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
                         <div className="flex justify-center items-center mt-2 px-2">
                             <Image
-                                src={frontendBg}
+                                src={programming}
                                 alt="bg"
                                 className=" h-36 object-cover rounded-sm"
                             />
 
                             <div className="absolute font-sans top-24 left-0 p-2">
                                 <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
-                                    ◎ Programming Languages
+                                    ◎ Languages
                                 </span>
                             </div>
                         </div>
@@ -410,7 +412,7 @@ export default function Home() {
                     <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
                         <div className="flex justify-center items-center mt-2 px-2">
                             <Image
-                                src={frontendBg}
+                                src={tool}
                                 alt="bg"
                                 className=" h-36 object-cover rounded-sm"
                             />
@@ -540,20 +542,20 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-16 text-2xl">
-                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                         <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
+                            <div className="p-2  ">
                                 <Image
                                     src={mimzy}
                                     alt=""
-                                    className="rounded-sm"
+                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                     unoptimized
                                 />
                             </div>
-                            <h1 className="mt-2 text-justify text-lg font-poppins">
-                                <span className="underline text-amber-600">
+                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
+                                <span className="underline text-sky-500">
                                     Mimzy
                                 </span>{" "}
-                                is a fun and engaging social media platform
+                                 is a fun and engaging social media platform
                                 where users can post memes, images, or videos
                                 and earn points for every post they make. You
                                 can like, comment, and interact with any post,
@@ -561,56 +563,80 @@ export default function Home() {
                                 Mimzy focuses on reward-based content sharing to
                                 make posting and engaging more exciting.
                             </h1>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                                <a
-                                    href="https://mimzy.vercel.app/"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Link
-                                </a>
-                                <a
-                                    href="https://github.com/yash700701/memehub"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Github
-                                </a>
+                            <div className="flex flex-wrap p-2 gap-2 mt-2">
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a  href="https://mimzy.vercel.app/">
+                                        Link
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
+
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://github.com/yash700701/memehub">
+                                        Github
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
                             </div>
                         </div>
-                        <div className="mt-16 text-2xl">
-                            <div className="p-2 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white ">
+                         <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
+                            <div className="p-2  ">
                                 <Image
                                     src={report}
                                     alt=""
-                                    className="rounded-sm"
+                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                     unoptimized
                                 />
                             </div>
-                            <h1 className="mt-2 text-justify text-lg font-poppins">
-                                <span className="underline text-blue-600">
+                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
+                                <span className="underline text-sky-500">
                                     The Report Management System
                                 </span>{" "}
-                                is a web app built with Next.js and MongoDB that
+                                 is a web app built with Next.js and MongoDB that
                                 helps organizations track daily employee
                                 activities. Employees can submit task reports,
                                 while admins can view, filter, and manage all
                                 submissions through a centralized dashboard for
                                 better transparency and productivity.
                             </h1>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                                <a
-                                    href="https://afj-reports.vercel.app/"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Link
-                                </a>
-                                <a
-                                    href="https://github.com/yash700701/nextbyte"
-                                    className="bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-3 font-poppins text-lg"
-                                >
-                                    Github
-                                </a>
+                            <div className="flex flex-wrap p-2 gap-2 mt-2">
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a   href="https://afj-reports.vercel.app/">
+                                        Link
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
+
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                    <a href="https://github.com/yash700701/nextbyte">
+                                        Github
+                                    </a>
+                                    <Image
+                                        src={open}
+                                        alt=""
+                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        unoptimized
+                                    />
+                                </div>
                             </div>
                         </div>
+                       
+                        
                     </div>
                 </div>
 
