@@ -15,6 +15,10 @@ import linkedin from "@/app/images/linkedin.png";
 import open from "@/app/images/share.png";
 import twitter from "@/app/images/twitter.png";
 import yash from "@/app/images/WhatsApp Image 2025-06-30 at 17.59.51_dba963c1.jpg";
+import frontendBg from "../../public/mehdi-mirzaie-kUe-dIOu5FE-unsplash.jpg";
+import devop from "../../public/devop.jpg";
+import backend from "../../public/florian-krumm-yLDabpoCL3s-unsplash.jpg";
+import db from "../../public/db.jpg";
 import GitHubCalendar from "react-github-calendar";
 import { AuroraText } from "@/components/magicui/aurora-text";
 
@@ -35,7 +39,7 @@ export default function Home() {
     const eQ = 885;
     const mS = 75;
     const mQ = 1883;
-    const hS = 0;
+    const hS = 2;
     const hQ = 853;
     const percentageEasy = (eS / eQ) * 100;
     const percentageMedium = (mS / mQ) * 100;
@@ -91,12 +95,14 @@ export default function Home() {
     };
 
     return (
-        <div className="relative bg-zinc-50 md:px-60 w-full">
+        <div className="relative bg-zinc-100 lg:px-60 w-full">
             {/* <Image src={bg} alt="bg" className="fixed top-0 left-0 w-full h-screen object-cover" /> */}
 
             <div className="overflow-y-scroll px-3  relative z-10 text-4xl font-grapeNuts font-bold text-zinc-900 ">
                 <div className="w-full h-14 text-lg border-b-[2px] flex items-center justify-between">
-                    <div></div>
+                    <div className="bg-zinc-100  rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white font-poppins px-2 py-1">
+                        <span className="text-green-500">●</span> Open to Work
+                    </div>
                     <div>
                         {viewCount && (
                             <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-2 py-1">
@@ -150,7 +156,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 mt-5">
                     <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                         <a href="https://aqua-brandy-94.tiiny.site/">Resume</a>
                         <Image
@@ -177,7 +183,7 @@ export default function Home() {
                 </div>
 
                 <Section title="Who Am I">
-                    <p className="text-justify font-poppins text-lg">
+                    <p className="text-justify text-2xl">
                         Hi! 👋 I’m Yash Tiwari, a MERN developer from Noida. I
                         specialize in creating full-stack web applications using
                         MongoDB, Express.js, React, and Node.js. With expertise
@@ -260,93 +266,173 @@ export default function Home() {
                     <h1 className="font-specialGothicExpandedOne">
                         Tech Stack
                     </h1>
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Frontend
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["React", "NextJs", "Tailwind", "Html", "Figma"].map(
-                            (tech, i) => (
+
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={frontendBg}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Frontend
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2 ">
+                            {[
+                                "React",
+                                "NextJs",
+                                "Tailwind",
+                                "Html",
+                                "Figma",
+                            ].map((tech, i) => (
                                 <p
                                     key={i}
                                     className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                 >
                                     {tech}
                                 </p>
-                            )
-                        )}
-                    </div>
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Backend
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["Express", "NodeJs"].map((tech, i) => (
-                            <p
-                                key={i}
-                                className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
-                            >
-                                {tech}
-                            </p>
-                        ))}
-                    </div>
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Database
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["MongoDB", "PostgresSQL", "Appwrite"].map(
-                            (tech, i) => (
-                                <p
-                                    key={i}
-                                    className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
-                                >
-                                    {tech}
-                                </p>
-                            )
-                        )}
-                    </div>
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Devops
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["Docker"].map((tech, i) => (
-                            <p
-                                key={i}
-                                className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
-                            >
-                                {tech}
-                            </p>
-                        ))}
+                            ))}
+                        </div>
                     </div>
 
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Programming Language
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["JavaScript", "C++", "C", "Java", "Python"].map(
-                            (tech, i) => (
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={backend}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Backend
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2">
+                            {["Express", "NodeJs"].map((tech, i) => (
                                 <p
                                     key={i}
                                     className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                                 >
                                     {tech}
                                 </p>
-                            )
-                        )}
+                            ))}
+                        </div>
                     </div>
 
-                    <h1 className="font-specialGothicExpandedOne mt-5 text-2xl border-b-[1px]">
-                        Tools
-                    </h1>
-                    <div className="flex flex-wrap text-lg mt-5 gap-2">
-                        {["Git", "Github", "Postman", "Redux Toolkit"].map(
-                            (tech, i) => (
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={db}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Database
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2">
+                            {["MongoDB", "PostgresSQL", "Appwrite"].map(
+                                (tech, i) => (
+                                    <p
+                                        key={i}
+                                        className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
+                                    >
+                                        {tech}
+                                    </p>
+                                )
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={devop}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Devops
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2">
+                            {["Docker"].map((tech, i) => (
                                 <p
                                     key={i}
                                     className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                                 >
                                     {tech}
                                 </p>
-                            )
-                        )}
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={frontendBg}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Programming Languages
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2">
+                            {["JavaScript", "C++", "C", "Java", "Python"].map(
+                                (tech, i) => (
+                                    <p
+                                        key={i}
+                                        className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
+                                    >
+                                        {tech}
+                                    </p>
+                                )
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden">
+                        <div className="flex justify-center items-center mt-2 px-2">
+                            <Image
+                                src={frontendBg}
+                                alt="bg"
+                                className=" h-36 object-cover rounded-sm"
+                            />
+
+                            <div className="absolute font-sans top-24 left-0 p-2">
+                                <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
+                                    ◎ Tools
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap text-lg p-2 gap-2">
+                            {["Git", "Github", "Postman", "Redux Toolkit"].map(
+                                (tech, i) => (
+                                    <p
+                                        key={i}
+                                        className="font-poppins px-4 py-1 bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
+                                    >
+                                        {tech}
+                                    </p>
+                                )
+                            )}
+                        </div>
                     </div>
                 </div>
 
@@ -411,7 +497,8 @@ export default function Home() {
                                     alt=""
                                     className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                     unoptimized
-                                />                            </div>
+                                />{" "}
+                            </div>
                             <h1 className="mt-2 text-justify text-lg font-sans font-light px-2">
                                 <span className="underline text-green-700">
                                     LeetCode Calendar
@@ -428,7 +515,7 @@ export default function Home() {
                                 dashboards.
                             </h1>
                             <div className="flex flex-wrap gap-2 mt-2 p-2">
-                                 <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
+                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
                                     <a href="https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar">
                                         Link
                                     </a>
@@ -548,6 +635,7 @@ export default function Home() {
                         }}
                         colorScheme="dark" // optional
                     />
+
                 </Section>
                 <Section title="Leetcode">
                     <div className="text-lg font-poppins">
@@ -556,90 +644,94 @@ export default function Home() {
                             <div
                                 style={{
                                     background: "#ebedf0",
-                                    height: "10px",
+                                    height: "30px",
                                     maxWidth: "850px",
                                 }}
+                                className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                             >
                                 <div
                                     style={{
                                         width: `${percentageEasy}%`,
-                                        background: "#000000",
                                         height: "100%",
                                         transition: "width 0.3s ease",
                                     }}
+                                    className="bg-zinc-950  rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-zinc-700"
                                 />
                             </div>
                             <p
                                 style={{
-                                    margin: 0,
                                     color: "#aaa",
                                     fontSize: "12px",
                                 }}
+                                className="mt-1"
                             >
                                 {eS} / {eQ}
                             </p>
                         </div>
                     </div>
-                    <div className="text-lg font-poppins">
+                    <div className="text-lg font-poppins mt-2">
                         <p>Medium</p>
                         <div style={{ width: "100%" }} className="mt-2">
                             <div
                                 style={{
                                     background: "#ebedf0",
-                                    height: "10px",
+                                    height: "30px",
                                     maxWidth: "850px",
                                 }}
+                                className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                             >
                                 <div
                                     style={{
                                         width: `${percentageMedium}%`,
-                                        background: "#000000",
                                         height: "100%",
                                         transition: "width 0.3s ease",
                                     }}
+                                    className="bg-zinc-950  rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-zinc-700"
                                 />
                             </div>
                             <p
                                 style={{
-                                    margin: 0,
                                     color: "#aaa",
                                     fontSize: "12px",
                                 }}
+                                className="mt-1"
                             >
                                 {mS} / {mQ}
                             </p>
                         </div>
                     </div>
-                    <div className="text-lg font-poppins">
+                    <div className="text-lg font-poppins mt-2">
                         <p>Hard</p>
                         <div style={{ width: "100%" }} className="mt-2">
                             <div
                                 style={{
                                     background: "#ebedf0",
-                                    height: "10px",
+                                    height: "30px",
                                     maxWidth: "850px",
                                 }}
+                                className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white "
                             >
                                 <div
                                     style={{
                                         width: `${percentageHard}%`,
-                                        background: "#000000",
                                         height: "100%",
                                         transition: "width 0.3s ease",
                                     }}
+                                    className="bg-zinc-950  rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-zinc-700"
                                 />
                             </div>
                             <p
                                 style={{
-                                    margin: 0,
                                     color: "#aaa",
                                     fontSize: "12px",
                                 }}
+                                className="mt-1"
                             >
                                 {hS} / {hQ}
                             </p>
                         </div>
                     </div>
+                    
 
                     <div className="w-full overflow-x-scroll mt-5">
                         <LeetCodeCalendar

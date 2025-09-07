@@ -1,34 +1,41 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter, Work_Sans } from "next/font/google"
+import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
+  variable: "--font-inter",
+  display: "swap",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const workSans = Work_Sans({
   subsets: ["latin"],
-});
+  variable: "--font-work-sans",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: "yash builds",
-  description: "A portfolio website",
-};
+  title: "Yash Tiwari - MERN Stack Developer",
+  description:
+    "Portfolio of Yash Tiwari, a passionate MERN stack developer specializing in full-stack web applications, modern UI/UX design, and scalable solutions.",
+  keywords: "MERN developer, React, Node.js, MongoDB, Express.js, Full Stack Developer, Web Development",
+  authors: [{ name: "Yash Tiwari" }],
+  openGraph: {
+    title: "Yash Tiwari - MERN Stack Developer",
+    description: "Portfolio showcasing modern web applications and full-stack development expertise",
+    type: "website",
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${workSans.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
-  );
+  )
 }
