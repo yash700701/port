@@ -27,6 +27,41 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { LeetCodeCalendar } from "@yashx700/leetcodecalendar";
 import { ins } from "motion/react-client";
 
+const projects = [
+    {
+        name: "IconKit",
+        description:
+            "IconKit is a powerful online tool that helps you generate platform-specific app icons like iOS, Android, and Web icons in various sizes and shapes (circle, square, squircle, etc.). It supports customization like background color, padding, badges, and text overlays. Now, IconKit also lets you generate AI-based images as icons using Gemini AI image generation, so you can create icons from text prompts too!",
+        link: "https://iconkit.vercel.app/",
+        github: "https://github.com/yashx700/iconkit",
+        image: iconkit,
+    },
+    {
+        name: "LeetCode Calendar",
+        description:
+            "LeetCode Calendar is an open-source React component that visualizes LeetCode activity in a GitHub-style contribution calendar. It supports full customization of block size, spacing, fonts, themes, and layout, making it easy for developers to showcase their coding streaks. Published on npm as @yashx700/leetcodecalendar, it's designed for easy installation and integration into personal websites or dashboards.",
+        link: "https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar",
+        github: "https://github.com/yashx700/leetcodecalendar",
+        image: npmLeetcodeCalendar,
+    },
+    {
+        name: "Mimzy",
+        description:
+            "Mimzy is a modern, open-source chat application built with React and Firebase. It features real-time messaging, user authentication, and a responsive design, making it easy for users to connect and communicate. With a focus on simplicity and usability, Mimzy is the perfect solution for anyone looking to create their own chat application.",
+        link: "https://mimzy.vercel.app/",
+        github: "https://github.com/yashx700/mimzy",
+        image: mimzy,
+    },
+    {
+        name: "The Report Management System",
+        description:
+            "The Report Management System is a web application designed to streamline the process of creating, managing, and sharing reports within an organization. Built with a focus on user-friendliness and efficiency, this system allows users to easily generate reports using customizable templates, track report statuses, and collaborate with team members in real-time. With robust access controls and integration capabilities, the Report Management System ensures that sensitive information is protected while facilitating seamless communication and workflow management.",
+        link: "https://report-management-system.vercel.app/",
+        github: "https://github.com/yashx700/report-management-system",
+        image: report,
+    },
+];
+
 export default function Home() {
     const [viewCount, setViewCount] = useState();
     const [formData, setFormData] = useState({
@@ -46,6 +81,12 @@ export default function Home() {
     const percentageEasy = (eS / eQ) * 100;
     const percentageMedium = (mS / mQ) * 100;
     const percentageHard = (hS / hQ) * 100;
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleDescription = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     useEffect(() => {
         const fetchViewCount = async () => {
@@ -195,7 +236,7 @@ export default function Home() {
                     </p>
                 </Section>
 
-                <div className="mt-10 bg-[#faf8f7]">
+                <div className="mt-10">
                     <h1 className="font-specialGothicExpandedOne">
                         Connect With Me
                     </h1>
@@ -443,200 +484,71 @@ export default function Home() {
                         Things I've Made
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
-                            <div className="p-2  ">
-                                <Image
-                                    src={iconkit}
-                                    alt=""
-                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                    unoptimized
-                                />
-                            </div>
-                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
-                                <span className="underline text-sky-500">
-                                    IconKit
-                                </span>{" "}
-                                is a powerful online tool that helps you
-                                generate platform-specific app icons like iOS,
-                                Android, and Web icons in various sizes and
-                                shapes (circle, square, squircle, etc.). It
-                                supports customization like background color,
-                                padding, badges, and text overlays. Now, IconKit
-                                also lets you generate AI-based images as icons
-                                using Gemini AI image generation, so you can
-                                create icons from text prompts too!
-                            </h1>
-                            <div className="flex flex-wrap p-2 gap-2 mt-2">
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://iconkit.vercel.app/">
-                                        Link
-                                    </a>
+                        {projects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white relative"
+                            >
+                                <div className="p-2">
                                     <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
                                         unoptimized
                                     />
                                 </div>
 
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://github.com/yash700701/iconkit">
-                                        Github
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
-                            <div className="p-2">
-                                <Image
-                                    src={npmLeetcodeCalendar}
-                                    alt=""
-                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                    unoptimized
-                                />{" "}
-                            </div>
-                            <h1 className="mt-2 text-justify text-lg font-sans font-light px-2">
-                                <span className="underline text-green-700">
-                                    LeetCode Calendar
-                                </span>{" "}
-                                is an open-source React component that
-                                visualizes LeetCode activity in a GitHub-style
-                                contribution calendar. It supports full
-                                customization of block size, spacing, fonts,
-                                themes, and layout, making it easy for
-                                developers to showcase their coding streaks.
-                                Published on npm as @yashx700/leetcodecalendar,
-                                it's designed for easy installation and
-                                integration into personal websites or
-                                dashboards.
-                            </h1>
-                            <div className="flex flex-wrap gap-2 mt-2 p-2">
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://www.npmjs.com/package/@yashx700/leetcodecalendar#leetcodecalendar">
-                                        Link
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
+                                {/* Header with toggle button */}
+                                <div className="flex justify-between items-center px-2">
+                                    <h1 className="text-xl font-light font-sans">
+                                        <span className="underline text-sky-500">
+                                            {project.name}
+                                        </span>
+                                    </h1>
+                                    <button
+                                        onClick={() => toggleDescription(index)}
+                                        className="text-sm text-blue-500 hover:text-blue-700 focus:outline-none"
+                                    >
+                                        {openIndex === index ? "Hide" : "Show"}
+                                    </button>
                                 </div>
 
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://github.com/yash700701/leetcodecalendar">
-                                        Github
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                         <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
-                            <div className="p-2  ">
-                                <Image
-                                    src={mimzy}
-                                    alt=""
-                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                    unoptimized
-                                />
-                            </div>
-                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
-                                <span className="underline text-sky-500">
-                                    Mimzy
-                                </span>{" "}
-                                 is a fun and engaging social media platform
-                                where users can post memes, images, or videos
-                                and earn points for every post they make. You
-                                can like, comment, and interact with any post,
-                                search for users, and easily login or logout.
-                                Mimzy focuses on reward-based content sharing to
-                                make posting and engaging more exciting.
-                            </h1>
-                            <div className="flex flex-wrap p-2 gap-2 mt-2">
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a  href="https://mimzy.vercel.app/">
-                                        Link
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
+                                {/* Animated Description */}
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ease-in-out px-2 ${
+                                        openIndex === index
+                                            ? "max-h-96 mt-2"
+                                            : "max-h-0"
+                                    }`}
+                                >
+                                    <p className="text-justify text-base font-light font-sans">
+                                        {project.description}
+                                    </p>
                                 </div>
 
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://github.com/yash700701/memehub">
-                                        Github
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                         <div className="mt-5 text-2xl bg-zinc-100 rounded-2xl shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white">
-                            <div className="p-2  ">
-                                <Image
-                                    src={report}
-                                    alt=""
-                                    className=" rounded-lg bg-zinc-100 p-2 shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                    unoptimized
-                                />
-                            </div>
-                            <h1 className="mt-2 text-justify px-2 text-lg font-light font-sans">
-                                <span className="underline text-sky-500">
-                                    The Report Management System
-                                </span>{" "}
-                                 is a web app built with Next.js and MongoDB that
-                                helps organizations track daily employee
-                                activities. Employees can submit task reports,
-                                while admins can view, filter, and manage all
-                                submissions through a centralized dashboard for
-                                better transparency and productivity.
-                            </h1>
-                            <div className="flex flex-wrap p-2 gap-2 mt-2">
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a   href="https://afj-reports.vercel.app/">
-                                        Link
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
-                                </div>
+                                <div className="flex flex-wrap p-2 gap-2 mt-2">
+                                    <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md px-4 py-2 font-poppins text-lg items-center flex">
+                                        <a href={project.link}>Link</a>
+                                        <Image
+                                            src={open}
+                                            alt=""
+                                            className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                            unoptimized
+                                        />
+                                    </div>
 
-                                <div className=" bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white px-4 py-2 font-poppins text-lg items-center flex">
-                                    <a href="https://github.com/yash700701/nextbyte">
-                                        Github
-                                    </a>
-                                    <Image
-                                        src={open}
-                                        alt=""
-                                        className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
-                                        unoptimized
-                                    />
+                                    <div className="bg-zinc-100 rounded-lg shadow-zinc-400 shadow-md px-4 py-2 font-poppins text-lg items-center flex">
+                                        <a href={project.github}>Github</a>
+                                        <Image
+                                            src={open}
+                                            alt=""
+                                            className="w-6 h-6 cursor-pointer ml-2 p-1 bg-zinc-100 rounded-sm shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white"
+                                            unoptimized
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                       
-                        
+                        ))}
                     </div>
                 </div>
 
@@ -661,7 +573,6 @@ export default function Home() {
                         }}
                         colorScheme="dark" // optional
                     />
-
                 </Section>
                 <Section title="Leetcode">
                     <div className="text-lg font-poppins">
@@ -757,7 +668,6 @@ export default function Home() {
                             </p>
                         </div>
                     </div>
-                    
 
                     <div className="w-full overflow-x-scroll mt-5">
                         <LeetCodeCalendar
