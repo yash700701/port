@@ -369,7 +369,7 @@ export default function Home() {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="mt-1 py-1 bg-white border border-gray-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] w-full"
+                            className="mt-1 py-1 bg-zinc-100 rounded-lg hadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white w-full"
                         >
                             {isLoading ? "Sending..." : "Send"}
                         </button>

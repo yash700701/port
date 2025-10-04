@@ -15,18 +15,18 @@ const skills = [
         image: frontendBg,
     },
     {
-        category: "Backend",
-        technologies: ["Express", "NodeJs"],
+        category: "Backend & Messaging",
+        technologies: ["Express", "NodeJs", "Kafka", "Socket.io"],
         image: backend,
     },
     {
         category: "DevOps",
-        technologies: ["Docker"],
+        technologies: ["Docker", "Google Cloud", "Vercel"],
         image: devop,
     },
     {
         category: "Database",
-        technologies: ["MongoDB", "PostgresSQL", "Appwrite", "Kafka"],
+        technologies: ["MongoDB", "PostgresSQL", "Appwrite"],
         image: db,
     },
     {
@@ -54,22 +54,24 @@ function TechStack() {
             {skills.map((skill, index) => (
                 <div
                     key={index}
-                    className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white  relative overflow-hidden"
+                    className="col-span-3 bg-zinc-100 mt-5 rounded-lg shadow-zinc-400 shadow-md inset-shadow-2xs inset-shadow-white relative overflow-hidden"
                 >
-                    <div className="flex justify-center items-center mt-2 px-2">
+                    <div className="flex justify-center items-center mt-2 px-2 relative">
                         <Image
                             src={skill.image}
                             alt="bg"
-                            className=" h-36 object-cover rounded-sm"
+                            className="h-36 w-full object-cover rounded-sm"
                         />
 
-                        <div className="absolute font-sans top-24 left-0 p-2">
+                        {/* Text at bottom of the image */}
+                        <div className="absolute bottom-0 left-0 w-full p-2 pl-4">
                             <span className="text-white font-extralight font-specialGothicExpandedOne px-2 text-2xl">
                                 ◎ {skill.category}
                             </span>
                         </div>
                     </div>
-                    <div className="flex flex-wrap text-lg p-2 gap-2 ">
+
+                    <div className="flex flex-wrap text-lg p-2 gap-2">
                         {skill.technologies.map((tech, i) => (
                             <p
                                 key={i}

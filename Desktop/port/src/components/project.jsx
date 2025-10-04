@@ -3,10 +3,19 @@ import iconkit from "@/app/images/Screenshot 2025-06-30 181011.png";
 import mimzy from "@/app/images/Screenshot 2025-06-05 204735.png";
 import npmLeetcodeCalendar from "@/app/images/npmLeetcodeCalendar.png";
 import report from "@/app/images/Screenshot 2025-06-05 205655.png";
+import careerPath from "@/app/images/careerPath.png";
 import Image from "next/image";
 import open from "@/app/images/share.png";
 
 const projects = [
+    {
+        name: "CareerPath",
+        description:
+            "CareerPath is a comprehensive platform designed to help individuals navigate their career journeys. It offers personalized career advice, skill assessments, and resources to help users make informed decisions about their professional paths.",
+        link: "https://career-path-gen-ai-exchange.vercel.app/",
+        github: "https://github.com/yash700701/career_path_backend",
+        image: careerPath,
+    },
     {
         name: "IconKit",
         description:
@@ -50,7 +59,7 @@ function Project() {
     return (
         <div className="mt-16">
             <h1 className="font-specialGothicExpandedOne">Things I've Made</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
                 {projects.map((project, index) => (
                     <div
                         key={index}
